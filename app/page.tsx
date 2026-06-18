@@ -8,6 +8,8 @@ import MailingList from "./components/MailingList";
 import Tech        from "./components/Tech";
 import Footer      from "./components/Footer";
 import Divider     from "./components/Divider";
+import BandMembers from "./components/BandMembers";
+
 
 export default function Page() {
   return (
@@ -17,6 +19,10 @@ export default function Page() {
         <Hero />
         <Divider color="red" />
         <About />
+        <Divider color="sky" />
+<BandMembers />
+<Divider color="green" />
+<Photos />
         <Divider color="green" />
         <Photos />
         <Divider color="blue" />

@@ -7,6 +7,7 @@ const links = [
   { label: "Videos",  href: "#videos"      },
   { label: "Shows",   href: "#shows"       },
   { label: "Tech",    href: "#tech"        },
+  { label: "Band",   href: "#band"   },
 ];
 
 export default function Nav() {
