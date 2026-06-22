@@ -6,7 +6,7 @@ const links = [
   { label: "Photos",  href: "#photos"      },
   { label: "Videos",  href: "#videos"      },
   { label: "Shows",   href: "#shows"       },
-  { label: "Tech",    href: "#tech"        },
+  { label: "Tech",    href: "/tech"        },
   { label: "Band",   href: "#band"   },
 ];
 
