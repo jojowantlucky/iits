@@ -62,41 +62,28 @@ export default function Footer() {
         </div>
 
         {/* Contact */}
-        <div>
-          <h3 className="font-display text-2xl text-white mb-6">Book Us</h3>
-          <div className="space-y-4">
-            <ContactRow
-              icon={
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              }
-              label="Email"
-              value={<a href={`mailto:${BOOKING_EMAIL}`} className="text-[var(--sky)] hover:underline">{BOOKING_EMAIL}</a>}
-            />
-            <ContactRow
-              icon={
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              }
-              label="Based In"
-              value="Portland, Oregon · Available Pacific Northwest + Travel"
-            />
-            <ContactRow
-              icon={
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-              }
-              label="Response Time"
-              value="We reply to all inquiries within 24 hours"
-            />
-          </div>
-        </div>
+        <div className="footer-contact">
+  <h3 className="font-display text-2xl text-white mb-4">Contact</h3>
+  <p className="text-white/50 text-sm leading-relaxed mb-4">
+    For booking inquiries, use the form on our{" "}
+    <a href="#contact" className="text-[var(--sky)] hover:underline">
+      booking page
+    </a>.
+  </p>
+  <div className="flex items-start gap-3">
+    <div className="w-9 h-9 bg-[var(--blue)] rounded-lg flex items-center justify-center flex-shrink-0">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+    </div>
+    <div>
+      <div className="font-mono text-[10px] tracking-widest uppercase text-white/40 mb-0.5">Based In</div>
+      <div className="text-sm text-white/70">Portland, Oregon · Available Pacific Northwest + Travel</div>
+    </div>
+  </div>
+</div>
+        
       </div>
 
       {/* Bottom bar */}

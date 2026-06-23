@@ -8,6 +8,8 @@ import Shows       from "./components/Shows";
 import MailingList from "./components/MailingList";
 import Footer      from "./components/Footer";
 import Divider     from "./components/Divider";
+import BookingForm from "./components/BookingForm";
+
 
 export default function Page() {
   return (
@@ -28,6 +30,9 @@ export default function Page() {
         <Divider color="green" />
         <MailingList />
         <Divider color="blue" />
+        
+<BookingForm />
+<Divider color="red" />
       </main>
       <Footer />
     </>
