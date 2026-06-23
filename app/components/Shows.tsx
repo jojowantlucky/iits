@@ -9,7 +9,7 @@ import Image from "next/image";
 // flyer: path to image in /public/flyers/, or null for placeholder
 // eventName: optional event/bill name (e.g. "Summer Bash", "Battle of the Bands")
 const SHOWS: {
-  date: string;       // "YYYY-MM-DD"
+  date: string;
   venue: string;
   city: string;
   eventName?: string;
@@ -19,24 +19,36 @@ const SHOWS: {
   soldOut?: boolean;
   flyer?: string | null;
 }[] = [
-  // ── EXAMPLES (uncomment and edit) ──
-  // {
-  //   date: "2025-03-14",
-  //   venue: "Wonder Ballroom",
-  //   city: "Portland, OR",
-  //   eventName: "Weezer Night",
-  //   flyer: "/flyers/2025-03-14.jpg",
-  // },
-  // {
-  //   date: "2025-08-14",
-  //   venue: "Aladdin Theater",
-  //   city: "Portland, OR",
-  //   eventName: "Summer Tribute Series",
-  //   doors: "7pm",
-  //   show: "8pm",
-  //   ticketUrl: "https://...",
-  //   flyer: null,
-  // },
+  { date: "2024-06-15", venue: "Dante's",                  city: "Portland, OR",  eventName: "Weezer Night",               flyer: "/flyers/2024-06-15-flyer.webp" },
+  { date: "2024-07-20", venue: "The Goodfoot",              city: "Portland, OR",  eventName: "Summer Tribute Series",      flyer: "/flyers/2024-07-20-flyer.webp" },
+  { date: "2024-08-10", venue: "Hawthorne Theatre",         city: "Portland, OR",  eventName: "Say It Ain't Weezer Farewell", flyer: "/flyers/2024-08-10-flyer.webp" },
+  { date: "2024-09-06", venue: "Aladdin Theater",           city: "Portland, OR",  eventName: "Labor Day Weekend Bash",     flyer: "/flyers/2024-09-06-flyer.webp" },
+  { date: "2024-10-19", venue: "Wonder Ballroom",           city: "Portland, OR",  eventName: "Halloween Preview",          flyer: "/flyers/2024-10-19-flyer.webp" },
+  { date: "2024-11-02", venue: "Doug Fir Lounge",           city: "Portland, OR",  eventName: "Fall Showcase",              flyer: "/flyers/2024-11-02-flyer.webp" },
+  { date: "2024-12-14", venue: "Revolution Hall",           city: "Portland, OR",  eventName: "Holiday Show",               flyer: "/flyers/2024-12-14-flyer.webp" },
+  { date: "2025-01-18", venue: "Mississippi Studios",       city: "Portland, OR",  eventName: "New Year Kickoff",           flyer: "/flyers/2025-01-18-flyer.webp" },
+  { date: "2025-02-08", venue: "Roseland Theater",          city: "Portland, OR",  eventName: "Valentine's Weekend",        flyer: "/flyers/2025-02-08-flyer.webp" },
+  { date: "2025-03-22", venue: "Bossanova Ballroom",        city: "Portland, OR",  eventName: "Spring Tribute Night",       flyer: "/flyers/2025-03-22-flyer.webp" },
+  { date: "2025-04-12", venue: "Star Theater",              city: "Portland, OR",  eventName: "April Showers Show",         flyer: "/flyers/2025-04-12-flyer.webp" },
+  { date: "2025-05-03", venue: "Berbati's",                 city: "Portland, OR",  eventName: "Cinco de Weezer",            flyer: "/flyers/2025-05-03-flyer.webp" },
+  { date: "2025-06-07", venue: "The Lot at PSU",            city: "Portland, OR",  eventName: "Summer Kickoff",             flyer: "/flyers/2025-06-07-flyer.webp" },
+  { date: "2025-07-19", venue: "Crystal Ballroom",          city: "Portland, OR",  eventName: "Blue Album Night",           flyer: "/flyers/2025-07-19-flyer.webp" },
+  { date: "2025-08-23", venue: "McMenamins Edgefield",      city: "Troutdale, OR", eventName: "Amphitheater Series",        flyer: "/flyers/2025-08-23-flyer.webp" },
+  { date: "2025-09-13", venue: "Neumos",                    city: "Seattle, WA",   eventName: "Seattle Debut",              flyer: "/flyers/2025-09-13-flyer.webp" },
+  { date: "2025-10-04", venue: "Dante's",                   city: "Portland, OR",  eventName: "Pinkerton Night",            flyer: "/flyers/2025-10-04-flyer.webp" },
+  { date: "2025-11-15", venue: "Wonder Ballroom",           city: "Portland, OR",  eventName: "Fall Showcase",              flyer: "/flyers/2025-11-15-flyer.webp" },
+  { date: "2025-12-20", venue: "Revolution Hall",           city: "Portland, OR",  eventName: "Holiday Spectacular",        flyer: "/flyers/2025-12-20-flyer.webp" },
+  { date: "2026-01-17", venue: "Mississippi Studios",       city: "Portland, OR",  eventName: "New Year Kickoff",           flyer: "/flyers/2026-01-17-flyer.webp" },
+  { date: "2026-02-14", venue: "Aladdin Theater",           city: "Portland, OR",  eventName: "Valentine's Weezer Night",   flyer: "/flyers/2026-02-14-flyer.webp" },
+  { date: "2026-03-07", venue: "Hawthorne Theatre",         city: "Portland, OR",  eventName: "Green Album Anniversary",    flyer: "/flyers/2026-03-07-flyer.webp" },
+  { date: "2026-04-18", venue: "Star Theater",              city: "Portland, OR",  eventName: "Spring Showcase",            flyer: "/flyers/2026-04-18-flyer.webp" },
+  { date: "2026-05-09", venue: "Bossanova Ballroom",        city: "Portland, OR",  eventName: "Cinco de Weezer",            flyer: "/flyers/2026-05-09-flyer.webp" },
+  { date: "2026-06-13", venue: "Crystal Ballroom",          city: "Portland, OR",  eventName: "Summer Kickoff",             flyer: "/flyers/2026-06-13-flyer.webp" },
+  { date: "2026-07-11", venue: "Roseland Theater",          city: "Portland, OR",  eventName: "Blue Album Night",           flyer: "/flyers/2026-07-11-flyer.webp" },
+  { date: "2026-08-01", venue: "Edgefield Amphitheater",    city: "Troutdale, OR", eventName: "Summer Series",              flyer: "/flyers/2026-08-01-flyer.webp", doors: "6pm", show: "7pm" },
+  { date: "2026-09-19", venue: "Neumos",                    city: "Seattle, WA",   eventName: "Seattle Return",             flyer: "/flyers/2026-09-19-flyer.webp", doors: "7pm", show: "8pm" },
+  { date: "2026-10-31", venue: "Wonder Ballroom",           city: "Portland, OR",  eventName: "Halloween Bash",             flyer: "/flyers/2026-10-31-flyer.webp", doors: "8pm", show: "9pm" },
+  { date: "2026-12-19", venue: "Revolution Hall",           city: "Portland, OR",  eventName: "Holiday Show",               flyer: "/flyers/2026-12-19-flyer.webp", doors: "7pm", show: "8pm" },
 ];
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
