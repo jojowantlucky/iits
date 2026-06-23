@@ -1,46 +1,45 @@
-// ── STAGE PLOT PDF ────────────────────────────────────────────────────────────
-// Place your stage plot PDF at /public/stage-plot.pdf
-// The download button below already points to it.
-
-// ── INPUT LIST ────────────────────────────────────────────────────────────────
-// Edit the channels array below to match your actual input list.
 const CHANNELS = [
-  { ch: "01", source: "Kick Drum",  notes: "Inside + outside mic", mon: false },
-  { ch: "02", source: "Snare",      notes: "Top + bottom",         mon: true  },
-  { ch: "03", source: "Hi-Hat",     notes: "",                     mon: false },
-  { ch: "04", source: "Rack Tom",   notes: "",                     mon: false },
-  { ch: "05", source: "Floor Tom",  notes: "",                     mon: false },
-  { ch: "06", source: "OH L",       notes: "Overhead stereo pair", mon: false },
-  { ch: "07", source: "OH R",       notes: "",                     mon: false },
-  { ch: "08", source: "Bass DI",    notes: "Active DI, post-amp",  mon: true  },
-  { ch: "09", source: "Guitar L",   notes: "Stereo cab / DI",      mon: true  },
-  { ch: "10", source: "Guitar R",   notes: "",                     mon: true  },
-  { ch: "11", source: "Keys L",     notes: "Stereo DI pair",       mon: true  },
-  { ch: "12", source: "Keys R",     notes: "",                     mon: false },
-  { ch: "13", source: "Lead Vox",   notes: "SM58 or similar",      mon: true  },
-  { ch: "14", source: "BG Vox 1",   notes: "",                     mon: true  },
-  { ch: "15", source: "BG Vox 2",   notes: "",                     mon: true  },
+  { ch: "01", source: "Kick",               notes: "",                     mon: false },
+  { ch: "02", source: "Snare",              notes: "",                     mon: false },
+  { ch: "03", source: "Hats",               notes: "",                     mon: false },
+  { ch: "04", source: "Tom 1",              notes: "",                     mon: false },
+  { ch: "05", source: "Tom 2",              notes: "",                     mon: false },
+  { ch: "06", source: "Tom 3",              notes: "",                     mon: false },
+  { ch: "07", source: "Overhead 1",         notes: "Stereo pair",          mon: false },
+  { ch: "08", source: "Overhead 2",         notes: "",                     mon: false },
+  { ch: "09", source: "Bass",               notes: "",                     mon: true  },
+  { ch: "10", source: "Guitar",             notes: "Stage center",         mon: true  },
+  { ch: "11", source: "Guitar L",           notes: "Stereo — stage left",  mon: true  },
+  { ch: "12", source: "Guitar R",           notes: "Stereo — stage right", mon: true  },
+  { ch: "13", source: "Lead Vocals",        notes: "",                     mon: true  },
+  { ch: "14", source: "Stage Left Vocals",  notes: "",                     mon: true  },
+  { ch: "15", source: "Drum Vocals",        notes: "",                     mon: true  },
+  { ch: "16", source: "Samples",            notes: "Stereo DI",            mon: true  },
 ];
 
 const NOTES = [
-  "Full backline available — can travel without amps if preferred",
-  "Minimum stage: 20ft wide × 15ft deep",
+  "We use our own in-ear monitor system — no on-stage floor wedges required",
+  "IEM system is built around a Behringer X-32 Rack",
+  "AES direct output compatible with Midas and Behringer consoles",
+  "Flying W sign: 8' wide x 3.5' tall, hangs above drummer via two rings, approx. 15 lbs — rigging point required if possible",
+  "Minimum stage: 20ft wide x 15ft deep",
   "Load-in: 90 min · Soundcheck: 45 min",
-  "4 monitor mixes required: drums, bass/guitar, lead vox, BG vox",
-  "IEM-compatible — happy to work with house monitor engineer",
 ];
 
 export default function Tech() {
   return (
     <section id="tech" className="py-24 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
-        <p className="font-mono text-[11px] tracking-[.18em] uppercase text-[var(--muted)] mb-2">For Promoters & Venues</p>
-        <h2 className="font-display text-5xl mb-10" style={{ color: "var(--ink)" }}>Stage Plot & Input List</h2>
+        <p className="font-mono text-[11px] tracking-[.18em] uppercase text-[var(--muted)] mb-2">
+          For Promoters and Venues
+        </p>
+        <h2 className="font-display text-5xl mb-10" style={{ color: "var(--ink)" }}>
+          Stage Plot and Input List
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-10 mb-8">
           {/* Stage plot card */}
           <div className="bg-[var(--ink)] rounded-2xl p-8 flex flex-col items-center text-center">
-            {/* Preview placeholder — swap for an <Image> of your stage plot if desired */}
             <div className="w-full aspect-[4/3] rounded-xl bg-white/5 border-2 border-dashed border-white/15 flex flex-col items-center justify-center mb-6 gap-2">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.5">
                 <rect x="3" y="3" width="18" height="18" rx="2"/>
@@ -49,10 +48,10 @@ export default function Tech() {
               <span className="font-mono text-xs text-white/30 tracking-widest">STAGE PLOT</span>
             </div>
             <p className="text-white/60 text-sm mb-6 leading-relaxed">
-              Full scaled stage diagram with monitor positions, backline placement, and cable runs.
+              Full scaled stage diagram with monitor positions, backline placement, and Flying W sign rigging point.
             </p>
-            <a
-              href="/stage-plot.pdf"
+            
+              <a href="/stage-plot.pdf"
               download
               className="inline-flex items-center gap-2 bg-[var(--green)] hover:bg-[#5fa010] text-[var(--ink)] font-mono text-xs font-bold tracking-widest uppercase px-6 py-3.5 rounded-xl transition-all hover:-translate-y-0.5"
             >
@@ -72,8 +71,11 @@ export default function Tech() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-gray-50">
-                    {["Ch", "Source", "Notes", "Mon"].map((h) => (
-                      <th key={h} className="font-mono text-[10px] tracking-widest uppercase text-[var(--muted)] px-3 py-2.5 text-left border-b border-gray-100">
+                    {["Ch", "Source", "Notes", "IEM"].map((h) => (
+                      <th
+                        key={h}
+                        className="font-mono text-[10px] tracking-widest uppercase text-[var(--muted)] px-3 py-2.5 text-left border-b border-gray-100"
+                      >
                         {h}
                       </th>
                     ))}
@@ -91,7 +93,7 @@ export default function Tech() {
                         {row.mon && (
                           <span
                             className="inline-block w-2.5 h-2.5 rounded-full bg-[var(--green)]"
-                            title="Needs monitor mix"
+                            title="Routed to IEM mix"
                           />
                         )}
                       </td>
@@ -102,12 +104,26 @@ export default function Tech() {
             </div>
             <p className="mt-2 font-mono text-[10px] text-[var(--muted)] tracking-wider">
               <span className="inline-block w-2 h-2 rounded-full bg-[var(--green)] mr-1.5 align-middle" />
-              = needs dedicated monitor mix
+              = routed to in-ear monitor mix
             </p>
           </div>
         </div>
 
-        {/* Notes */}
+        {/* Flying W callout */}
+        <div className="bg-[var(--blue)] rounded-2xl p-6 mb-6 flex gap-4 items-start">
+          <div className="text-3xl">🤘</div>
+          <div>
+            <h3 className="font-display text-xl text-white mb-1">Flying W Sign</h3>
+            <p className="text-white/80 text-sm leading-relaxed">
+              We travel with an 8ft wide x 3.5ft tall illuminated Flying W sign that hangs above the drummer.
+              It attaches via two rings and weighs approximately 15 lbs. A rigging point above the drum
+              position is required if possible — please flag if your venue cannot accommodate this and
+              we will discuss alternatives.
+            </p>
+          </div>
+        </div>
+
+        {/* Production notes */}
         <div className="bg-[var(--sand)] rounded-2xl p-6 border-l-4 border-[var(--blue)]">
           <h3 className="font-display text-xl mb-3">Production Notes</h3>
           <ul className="space-y-2">

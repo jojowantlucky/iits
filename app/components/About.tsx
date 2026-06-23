@@ -14,15 +14,15 @@ export default function About() {
           <p className="font-mono text-[11px] tracking-[.18em] uppercase text-[var(--muted)] mb-2">Who We Are</p>
           <h2 className="font-display text-5xl mb-8" style={{ color: "var(--ink)" }}>The Band</h2>
           <div className="space-y-4 text-[1.05rem] leading-relaxed text-gray-600">
-            <p>
-              Island in the Sun is Portland's most dedicated Weezer tribute band — four musicians who have spent years obsessing over every riff, harmony, and production detail so you don't have to wonder if it'll sound right. It always does.
-            </p>
-            <p>
-              From the crunchy power-pop of the Blue Album to the raw emotion of Pinkerton, the infectious hooks of Green and Maladroit, and everything in between, we cover the full Weezer catalog with the energy and precision it deserves.
-            </p>
-            <p>
-              Whether you're booking a festival, a club night, a private event, or a Weezer-themed anything — we bring the whole package: professional sound, stage presence, and a crowd that will not stop singing along.
-            </p>
+           <p>
+  Island in the Sun is Portland's most dedicated Weezer tribute band — four musicians who have spent years obsessing over every riff, harmony, and production detail so you don't have to wonder if it'll sound right. It always does.
+</p>
+<p>
+  From the crunchy power-pop of the Blue Album to the raw emotion of Pinkerton, the infectious hooks of Green and Maladroit, and everything in between, we cover the full Weezer catalog with the energy and precision it deserves.
+</p>
+<p>
+  Formerly known as Say It Ain't Weezer, the band rebranded as Island in the Sun and hasn't looked back — except to play songs from every era of the catalog. Whether you're coming to sing every word or hearing us for the first time, there's a moment in every set that gets you.
+</p>
           </div>
         </div>
 

@@ -102,11 +102,11 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-5 flex flex-col sm:flex-row justify-between items-center gap-2 max-w-7xl mx-auto">
         <span className="font-mono text-[11px] text-white/30 tracking-wider">
-          © {new Date().getFullYear()} Island in the Sun · islandinthesun.band
-        </span>
-        <span className="font-mono text-[11px] text-white/25 tracking-wider">
-          Not affiliated with Weezer or DGC Records
-        </span>
+  © {new Date().getFullYear()} Noteworthy Productions, LLC · islandinthesun.band
+</span>
+<span className="font-mono text-[11px] text-white/25 tracking-wider">
+  Website design by Joe Ebner · Not affiliated with Weezer or DGC Records
+</span>
       </div>
     </footer>
   );

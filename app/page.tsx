@@ -1,15 +1,13 @@
 import Nav         from "./components/Nav";
 import Hero        from "./components/Hero";
 import About       from "./components/About";
+import BandMembers from "./components/BandMembers";
 import Photos      from "./components/Photos";
 import Videos      from "./components/Videos";
 import Shows       from "./components/Shows";
 import MailingList from "./components/MailingList";
-import Tech        from "./components/Tech";
 import Footer      from "./components/Footer";
 import Divider     from "./components/Divider";
-import BandMembers from "./components/BandMembers";
-
 
 export default function Page() {
   return (
@@ -20,9 +18,7 @@ export default function Page() {
         <Divider color="red" />
         <About />
         <Divider color="sky" />
-<BandMembers />
-<Divider color="green" />
-<Photos />
+        <BandMembers />
         <Divider color="green" />
         <Photos />
         <Divider color="blue" />
@@ -31,8 +27,6 @@ export default function Page() {
         <Shows />
         <Divider color="green" />
         <MailingList />
-        <Divider color="sky" />
-        <Tech />
         <Divider color="blue" />
       </main>
       <Footer />
