@@ -23,7 +23,7 @@ export default function Hero() {
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
-        src="/video/hero.mp4"
+        src="/video/hero.webm"
         poster="/video/hero-poster.jpg"
         loop
         muted
